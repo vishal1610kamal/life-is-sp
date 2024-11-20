@@ -1,0 +1,24 @@
+{
+  "berth-bookings": {
+    "get": {
+      "success": "Booking returned successfully",
+      "error": "Error getting all booking details"
+    },
+    "get-all": {
+      "success": "All bookings returned successfully",
+      "error": "Error getting the booking details"
+    },
+    "update": {
+      "success": "Booking updated successfully",
+      "error": "Error updating booking details"
+    },
+    "post": {
+      "success": "Booking created successfully",
+      "error": "Error adding booking details"
+    },
+    "delete": {
+      "success": "Booking deleted successfully",
+      "error": "Error deleting booking details"
+    }
+  }
+}
