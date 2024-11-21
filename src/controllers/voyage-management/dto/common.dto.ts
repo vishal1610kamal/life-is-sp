@@ -268,62 +268,6 @@ export class MSDSDocumentUploadListRequestDtoData {
   basic_filters: MSDSDocumentUploadListRequestBasicFilterDto;
 }
 
-export class LineDto {
-  @ApiProperty()
-  id: string;
-
-  @ApiProperty()
-  name: string;
-
-  @ApiProperty()
-  code: string;
-
-  @ApiProperty()
-  type: string;
-}
-
-export class ISOCodeDto {
-  @ApiProperty()
-  id: string;
-
-  @ApiProperty()
-  name: string;
-
-  @ApiProperty()
-  code: string;
-
-  @ApiProperty()
-  type: string;
-}
-
-export class OperationTypeDto {
-  @ApiProperty()
-  id: string;
-
-  @ApiProperty()
-  name: string;
-
-  @ApiProperty()
-  code: string;
-
-  @ApiProperty()
-  type: string;
-}
-
-export class CategoryStatusDto {
-  @ApiProperty()
-  id: string;
-
-  @ApiProperty()
-  name: string;
-
-  @ApiProperty()
-  code: string;
-
-  @ApiProperty()
-  type: string;
-}
-
 export class MSDSDocumentUploadListResponseDataDto {
   @ApiProperty()
   container_number: string;
@@ -331,18 +275,18 @@ export class MSDSDocumentUploadListResponseDataDto {
   @ApiProperty()
   container_id: number;
 
-  @ApiProperty({ type: LineDto })
+  @ApiProperty({ type: RestQuickCodeDto })
   @ValidateNested()
-  @Type(() => LineDto)
-  line: LineDto;
+  @Type(() => RestQuickCodeDto)
+  line: RestQuickCodeDto;
 
   @ApiProperty()
   imco_code: number;
 
-  @ApiProperty({ type: ISOCodeDto })
+  @ApiProperty({ type: RestQuickCodeDto })
   @ValidateNested()
-  @Type(() => ISOCodeDto)
-  iso_code: ISOCodeDto;
+  @Type(() => RestQuickCodeDto)
+  iso_code: RestQuickCodeDto;
 
   @ApiProperty()
   un_no: number;
@@ -350,10 +294,10 @@ export class MSDSDocumentUploadListResponseDataDto {
   @ApiProperty()
   container_sel: boolean;
 
-  @ApiProperty({ type: OperationTypeDto })
+  @ApiProperty({ type: RestQuickCodeDto })
   @ValidateNested()
-  @Type(() => OperationTypeDto)
-  operation_type: OperationTypeDto;
+  @Type(() => RestQuickCodeDto)
+  operation_type: RestQuickCodeDto;
 
   @ApiProperty()
   operation_sub_type_id: number;
@@ -361,10 +305,10 @@ export class MSDSDocumentUploadListResponseDataDto {
   @ApiProperty()
   operation_status_id: number;
 
-  @ApiProperty({ type: CategoryStatusDto })
+  @ApiProperty({ type: RestQuickCodeDto })
   @ValidateNested()
-  @Type(() => CategoryStatusDto)
-  category_status: CategoryStatusDto;
+  @Type(() => RestQuickCodeDto)
+  category_status: RestQuickCodeDto;
 
   @ApiProperty()
   category_id: number;
